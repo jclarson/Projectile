@@ -54,13 +54,16 @@ function getRandom(scale) {
   return Math.random() * scale;
 }
 
+function randomColor() {
+  return Math.floor(Math.random() * 16777215).toString(16);
+}
+
 function factory(total) {
   // check how many balls exist already and add to the array
   for (let i = balls.length; i < total; i++) {
     let velx = Math.floor(getRandom(20) - 10);
     let vely = Math.floor(getRandom(20) - 10);
-    let colorNumber = Math.floor(getRandom(16777215));
-    makeBall(getRandom(800 - size), getRandom(400 - size), colorNumber.toString(16), velx, vely, 0);
+    makeBall(getRandom(800 - size), getRandom(400 - size), randomColor(), velx, vely, 0);
   }
   update();
 }
