@@ -2,7 +2,7 @@
 
 Projectile
 
-#Description:
+# Description:
 
 The goal of this page was to generate balls in random locations, and have them move within a bounded area, affected by gravity.
 I also opted to make the ball color be randomly generated.
